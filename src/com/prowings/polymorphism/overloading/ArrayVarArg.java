@@ -2,22 +2,17 @@ package com.prowings.polymorphism.overloading;
 
 public class ArrayVarArg {
 	
-	public void test(Integer ...i )
+	public static void test(int[] i)
 	{
-		System.out.println("Integer array");
+		System.out.println("int array");
 	}
 	
-//	public void test(int ... i)
-//	{
-//		System.out.println("int array");
-//	}
+	public static void test(long[] i)
+	{
+		System.out.println("long array");
+	}
 	
-//	public void test(long ... i)//it creates ambigues situation with Integer method
-//	{
-//		System.out.println("long array");
-//	}
-	
-	public void test(char[]... ch)
+	public static void test(char[] ch)
 	{
 		System.out.println("Charachter array");
 	}
@@ -25,15 +20,10 @@ public class ArrayVarArg {
 	
 	public static void main(String[] args) {
 		
-		char[] ch = {'a','b','c'};
+		int[] nums = {1,2,3,4,5};
 		
-		int[] arr = {12,21,32};
+		test(nums);
 		
-		ArrayVarArg av= new ArrayVarArg();
-		av.test(ch);
-		
-//		av.test(arr);
-		
-		av.test(12,23,45);
+//		test(null);//The method test(int[]) is ambiguous for the type ArrayVarArg
 	}
 }
