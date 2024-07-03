@@ -6,7 +6,7 @@ public abstract class AbstractClassDemo {
 	String s1;
 	String s2;
 	public static void main(String[] args) {
-		//AbstractClassDemo acd = new AbstractClassDemo();
+		//AbstractClassDemo acd = new AbstractClassDemo();//Compile time error
 	}
 	AbstractClassDemo()
 	{
